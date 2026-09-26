@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos de comida</title>
+    <link rel="stylesheet" href="{% static 'pedidos/style.css' %}">
+</head>
+<body>
+    <main class="contenedor">
+        <h1>Pedidos de comida</h1>
+
+        <section>
+            <h2>Registrar cliente</h2>
+            <form id="form-cliente">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" maxlength="100" required>
+                <button type="submit">Guardar cliente</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Nuevo pedido</h2>
+            <form id="form-pedido">
+                <label for="cliente">Cliente</label>
+                <select id="cliente" required></select>
+
+                <label for="producto">Producto</label>
+                <select id="producto" required></select>
+
+                <label for="cantidad">Cantidad</label>
+                <input type="number" id="cantidad" min="1" value="1" required>
+
+                <label for="observaciones">Observaciones</label>
+                <textarea id="observaciones" rows="3"></textarea>
+
+                <label for="total">Total</label>
+                <input type="text" id="total" value="Q0.00" readonly>
+
+                <button type="submit">Crear pedido</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Pedidos realizados</h2>
+            <p id="mensaje" class="mensaje"></p>
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Cliente</th>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Observaciones</th>
+                            <th>Total</th>
+                            <th>Estado</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-pedidos"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="{% static 'pedidos/app.js' %}"></script>
+</body>
+</html>

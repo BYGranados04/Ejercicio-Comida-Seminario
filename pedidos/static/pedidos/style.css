@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 15px;
+    background: #eeeeee;
+    color: #222222;
+    font-family: Arial, sans-serif;
+}
+
+.contenedor {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 25px;
+    background: white;
+    border: 1px solid #dddddd;
+}
+
+h1 {
+    text-align: center;
+}
+
+section {
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: 1px solid #dddddd;
+}
+
+form {
+    max-width: 500px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 9px;
+    border: 1px solid #aaaaaa;
+    border-radius: 3px;
+    font: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 16px;
+    border: 0;
+    border-radius: 3px;
+    background: #1769aa;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #12558b;
+}
+
+.tabla-contenedor {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 9px;
+    border: 1px solid #cccccc;
+    text-align: left;
+}
+
+th {
+    background: #e5e5e5;
+}
+
+td select {
+    min-width: 120px;
+}
+
+.mensaje {
+    min-height: 20px;
+    color: #1769aa;
+}
+
+@media (max-width: 600px) {
+    .contenedor {
+        padding: 15px;
+    }
+}
